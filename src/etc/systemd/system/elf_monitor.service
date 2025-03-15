@@ -1,0 +1,12 @@
+[Unit]
+Description=X64 ELF Monitor Service
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/local/bin/elf_monitor
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
